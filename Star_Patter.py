@@ -10,7 +10,7 @@ print("pattern increading star\n")
 
 for x in range(z):
     for y in range(x+1):
-        print('*',end='')
+        print('* ',end='')
     print('\n')
 
 
@@ -18,7 +18,7 @@ print("pattern  decreasing star\n")
 
 for x in range(z):
     for y in range(z-x):
-        print('*',end='')
+        print('* ',end='')
     print('\n')
 
 
@@ -56,4 +56,12 @@ for x in range(z):
     print('\n')
 
 
+factorial=1
+for a in range(1,z+1):
+    if(z>0):
+        factorial=factorial*a
+
+print(f'the factorial of the nmber {z} is {factorial}')
+    
+    
 
