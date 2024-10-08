@@ -1,11 +1,11 @@
 z= int(input("enter a number to diplay star in rows : "))
-print("pattern \n")
+print("pattern n*n \n")
 for x in range(z):
     for y in range(z):
         print(y,end=' ')
     print('\n')
 
-print("pattern \n")
+print("pattern increading star\n")
 
 
 for x in range(z):
@@ -14,7 +14,7 @@ for x in range(z):
     print('\n')
 
 
-print("pattern \n")
+print("pattern  decreasing star\n")
 
 for x in range(z):
     for y in range(z-x):
@@ -22,18 +22,18 @@ for x in range(z):
     print('\n')
 
 
-print("pattern \n")
+print("pattern pyramid\n")
 
 
 for x in range(z):
     for a in range(z-x):
-        print('e',end='')
+        print(' ',end='')
     for y in range(x+1):
         print(f'{y+1}',end=' ')
     print('\n')
 
 
-print("pattern \n")
+print("pattern  up down pyramid\n")
 
 
 for x in range(z):
@@ -42,3 +42,18 @@ for x in range(z):
     for y in range(z-x):
         print(f'{y+1}',end=' ')
     print('\n')
+
+
+
+print("pattern\n")
+
+
+for x in range(z):
+    for a in range(z-x):
+        print(' ',end=' ')
+    for y in range(x+1):
+            print(f' {y+1}',end='')
+    print('\n')
+
+
+
