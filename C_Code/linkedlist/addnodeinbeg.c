@@ -6,15 +6,18 @@ struct node {
     struct node *link;
 } *start = NULL; // Initialize start to NULL
 
-void main(){
-    struct node a,b;
-    printf("Enter the alue");
-    scanf("%d",&a.data);
-    printf("%d",a.data);
+void create(int k) {
+    struct node *q, *temp;
 
-   printf("enter the data");
-   scanf("%d",a->data);
-   printf("%d",a->data);
+    // Allocate memory for the new node
+    temp = (struct node*) malloc(sizeof(struct node));
+    if (temp == NULL) {
+        printf("Memory allocation failed\n");
+        return;
+    }
 
+    // Assign the data and set the link to NULL
+    temp->data = k;
+    temp->link = NULL;
 
 }
