@@ -102,6 +102,7 @@ print(x.ndim)
 
 
 cd=np.array([1,2,4,8,9],ndmin=5)
+print("the structure of the array that will look", cd)
 print(cd.ndim)
 
 

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>  // For malloc
 #include <stdbool.h> // Include this to use bool, true, and false
@@ -72,6 +73,29 @@ void dele()
 
 }
 
+void delenodeinbet(int k)
+{
+    struct node *temp,*q;
+    if (start->data==k)
+    {
+        temp=start;
+        start=temp->link;
+        free(temp);
+    }
+    q=start;
+    while(q->link!=NULL)
+    {
+        if(q->link->data==k)
+        {
+            temp=q->link;
+            q->link=temp->link;
+            free(temp);
+        }
+        q=q->link;
+    }
+}
+
+
 
 void main()
 {
@@ -87,7 +111,7 @@ void main()
 
         if ((strcmp(text, "y") == 0 || strcmp(text, "Y") == 0)) // Corrected string comparison
         {
-            printf(" Enter 1 to add data in linked list \n Enter 2 to add data in between two nodes \n Enter 3 to delete data in the beginning\n");
+            printf(" Enter 1 to add data in linked list : \n Enter 2 to add data in between two nodes : \n Enter 3 to delete data in the beginning :\n Enter 4 to delete data in the beginning :");
             scanf("%d", &n);
             if (n == 1)
             {
@@ -113,6 +137,13 @@ void main()
                 printf("We have successfully deleted in the entry in the beginning\n");
                 dele();
 
+            }else if(n==4)
+            {
+                int pos;
+                printf("Enter the position number to add in linked list:\n");
+                scanf("%d", &pos);
+                delenodeinbet(pos);
+                continue;
             }
         }
         else if (strcmp(text, "n") == 0 )

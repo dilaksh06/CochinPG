@@ -19,5 +19,13 @@ void create(int k) {
     // Assign the data and set the link to NULL
     temp->data = k;
     temp->link = NULL;
+    start=temp;
 
 }
+void main(){
+create(50);
+printf("what actually the start contain is the memory address of the newly created node temp \nand the memory value will be %d ",start);
+printf("\nthe data in the start node is = %d ",start->data);
+}
+
+
