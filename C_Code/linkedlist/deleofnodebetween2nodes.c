@@ -95,6 +95,19 @@ void delenodeinbet(int k)
     }
 }
 
+void display()
+{
+
+    struct node *temp;
+    temp=start;
+    printf("\nthe values are respectively\n");
+    while(temp!=NULL)
+    {
+     printf("%d->",temp->data);
+     temp=temp->link;
+    }
+    printf("NULL\n");
+}
 
 
 void main()
@@ -111,7 +124,7 @@ void main()
 
         if ((strcmp(text, "y") == 0 || strcmp(text, "Y") == 0)) // Corrected string comparison
         {
-            printf(" Enter 1 to add data in linked list : \n Enter 2 to add data in between two nodes : \n Enter 3 to delete data in the beginning :\n Enter 4 to delete data in the beginning :");
+            printf(" Enter 1 to add data in linked list : \n Enter 2 to add data in between two nodes : \n Enter 3 to delete data in the beginning :\n Enter 4 to delete data in the beginning : \n Enter 5 to display : \n");
             scanf("%d", &n);
             if (n == 1)
             {
@@ -143,6 +156,11 @@ void main()
                 printf("Enter the position number to add in linked list:\n");
                 scanf("%d", &pos);
                 delenodeinbet(pos);
+                continue;
+            }else if(n==5)
+            {
+                printf("tha values are respectively:\n");
+                display();
                 continue;
             }
         }

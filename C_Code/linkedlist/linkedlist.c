@@ -4,7 +4,7 @@
 struct node {
     int data;
     struct node *link;
-} *start = NULL; // Initialize start to NULL
+} *start = NULL,*end=NULL; // Initialize start to NULL
 
 void create(int k) {
     struct node *q, *temp;

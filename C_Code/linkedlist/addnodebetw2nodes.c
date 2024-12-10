@@ -7,10 +7,9 @@ struct node
 {
     int data;
     struct node *link;
-} *start = NULL; // Initialize start to NULL
+} *start = NULL, *end = NULL; // Initialize start to NULL
 
-
-//adding node
+// adding node
 void create(int k)
 {
     struct node *q, *temp;
@@ -28,19 +27,23 @@ void create(int k)
     temp->link = NULL;
 
     // If the list is empty, set 'start' to the new node
-    if (start == NULL) {
+    if (start == NULL)
+    {
         start = temp;
-    } else {
+    }
+    else
+    {
         // Otherwise, traverse the list and add the new node at the end
         q = start;
-        while (q->link != NULL) {
+        while (q->link != NULL)
+        {
             q = q->link;
         }
         q->link = temp;
     }
 }
 
-//adding node in between nodes
+// adding node in between nodes
 void addnode(int k, int pos)
 {
     int i;
@@ -48,7 +51,7 @@ void addnode(int k, int pos)
     temp = (struct node *)malloc(sizeof(struct node));
     temp->data = k;
     q = start;
-    for (i=0; i < pos - 1; i++)
+    for (i = 0; i < pos - 1; i++)
     {
         q = q->link;
     }
@@ -61,17 +64,15 @@ void addnode(int k, int pos)
     q->link = temp;
 }
 
-//deletion of node in the beginning
+// deletion of node in the beginning
 void dele()
 {
     struct node *temp;
-    temp=(struct node *)malloc(sizeof(struct node));
-    temp=start;
-    start=temp->link;
+    temp = (struct node *)malloc(sizeof(struct node));
+    temp = start;
+    start = temp->link;
     free(temp);
-
 }
-
 
 void main()
 {
@@ -108,14 +109,14 @@ void main()
 
                 addnode(val, pos); // Assuming create function is defined elsewhere
                 continue;
-            } else if (n == 3)
+            }
+            else if (n == 3)
             {
                 printf("We have successfully deleted in the entry in the beginning\n");
                 dele();
-
             }
         }
-        else if (strcmp(text, "n") == 0 )
+        else if (strcmp(text, "n") == 0)
         {
             printf("we ate going to print the values in the node\n");
             struct node *ptr = start;
@@ -125,8 +126,6 @@ void main()
                 ptr = ptr->link;
             }
             break;
-
         }
     }
-
 }

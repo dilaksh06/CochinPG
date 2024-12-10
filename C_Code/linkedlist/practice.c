@@ -8,13 +8,13 @@ struct node {
 
 void main(){
     struct node a,b;
-    printf("Enter the alue");
+    printf("Enter the value\n");
     scanf("%d",&a.data);
     printf("%d",a.data);
 
-   printf("enter the data");
-   scanf("%d",a->data);
-   printf("%d",a->data);
+   //printf("enter the data");
+   //scanf("%d",a->data);
+  // printf("%d",a->data);
 
 
 }

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+typedef struct {
+    int day;
+    int month;
+    int year;
+} Date;
+
+typedef struct {
+    char name[50];
+    int age;
+    float height;
+    Date birthday;
+} Person;
+
+void printPerson(Person *p) {
+    printf("Name: %s, Age: %d, Birthday: %02d/%02d/%d\n", p->name, p->age, p->birthday.day, p->birthday.month, p->birthday.year);
+}
+
+int main() {
+    Person person1 = {"Alice", 30, 5.7, {15, 3, 1990}};
+    printPerson(&person1);
+
+    return 0;
+}
